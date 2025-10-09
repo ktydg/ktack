@@ -44,6 +44,7 @@ export default defineConfig([
       'comma-dangle': ['warn', 'always-multiline'],
       'object-curly-spacing': ['warn', 'always'],
       'no-console': ['error', { allow: ['error', 'warn'] }],
+      'no-unreachable': 'error',
       'react/jsx-sort-props': [
         'warn',
         {
