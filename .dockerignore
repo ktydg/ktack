@@ -1,0 +1,15 @@
+.git
+.husky
+.vscode
+.dockerignore
+.gitignore
+.prettierignore
+
+dist
+node_modules
+
+docker-compose.yml
+components.json
+eslint.config
+prettier.config
+README.md

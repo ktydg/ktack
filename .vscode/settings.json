@@ -1,0 +1,44 @@
+{
+  // bun хуйня ебучая. Конфиг его не работает, чтобы дефолт рантайм поставить bun вместо node
+  "terminal.integrated.env.windows": {
+    "BUN_OPTIONS": "--bun"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.removeUnusedImports": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "tailwindCSS.classAttributes": [
+    "class",
+    "class:list",
+    "className",
+    "className:list",
+    "ngClass",
+    "classes",
+    "classes:list"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    // Добавляет tailwind подсказки стилей в функциях clsx, cva, cx, cn
+    [
+      "(?:clsx|cva|cx|cn)\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+      "'([^']*)'"
+    ],
+    [
+      "(?:clsx|cva|cx|cn)\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+      "\"([^\"]*)\""
+    ],
+    [
+      "(?:clsx|cva|cx|cn)\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+      "`([^`]*)`"
+    ]
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "files.eol": "\n"
+}
