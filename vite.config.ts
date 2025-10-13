@@ -18,7 +18,11 @@ export default defineConfig(({ mode }) => {
         routesDirectory: './src/pages',
         generatedRouteTree: './src/app/routerTree.gen.ts',
       }),
-      react(),
+      react({
+        babel: {
+          plugins: [['babel-plugin-react-compiler']],
+        },
+      }),
       tailwindcss(),
       svgr(),
     ],
