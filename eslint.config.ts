@@ -20,8 +20,8 @@ export default defineConfig([
       pluginQuery.configs['flat/recommended'],
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat['jsx-runtime'],
-      reactRefresh.configs.vite,
       reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
     ],
     settings: {
       react: {
@@ -51,6 +51,22 @@ export default defineConfig([
           reservedFirst: true, // Зарезервированные пропсы (key, ref) в начало
           multiline: 'last',
         },
+      ],
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        { allowBoolean: true },
+      ],
+      '@typescript-eslint/restrict-plus-operands': [
+        'error',
+        { allowNumberAndString: true },
+      ],
+      '@typescript-eslint/no-confusing-void-expression': [
+        'error',
+        { ignoreArrowShorthand: true },
+      ],
+      '@typescript-eslint/prefer-nullish-coalescing': [
+        'error',
+        { ignorePrimitives: { string: true } },
       ],
     },
   },
