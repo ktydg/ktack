@@ -12,9 +12,6 @@ export default defineConfig([
   globalIgnores(['dist', '**/routerTree.gen.ts']),
   {
     files: ['**/*.{ts,tsx}'],
-    plugins: {
-      'react-hooks': reactHooks,
-    },
     extends: [
       eslint.configs.recommended,
       tseslint.configs.strictTypeChecked,
@@ -24,7 +21,7 @@ export default defineConfig([
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat['jsx-runtime'],
       reactRefresh.configs.vite,
-      'react-hooks/recommended',
+      reactHooks.configs.flat.recommended,
     ],
     settings: {
       react: {
