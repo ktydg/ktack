@@ -1,7 +1,7 @@
 {
   // bun хуйня ебучая. Конфиг его не работает, чтобы дефолт рантайм поставить bun вместо node
   "terminal.integrated.env.windows": {
-    "BUN_OPTIONS": "--bun"
+    "BUN_OPTIONS": "--bun --verbose"
   },
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
