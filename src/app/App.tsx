@@ -1,6 +1,6 @@
+import { queryClient } from '@/shared/config/queryClient';
 import { Meta } from './Meta';
-import { queryClient } from './providers/TanQuery/queryClient';
-import { TanQueryProvider } from './providers/TanQuery/TanQueryProvider';
+import { TanQueryProvider } from './providers/TanQueryProvider';
 import { TanRouterProvider } from './providers/TanRouterProvider';
 
 export function App() {
