@@ -8,7 +8,14 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+  const env = loadEnv(mode, process.cwd(), '');
+
+  if (!env.VITE_SERVER_URL) {
+    throw new Error('Переменная окружения VITE_SERVER_URL отсутствует');
+  }
+  if (!env.VITE_WEBSITE_URL) {
+    throw new Error('Переменная окружения VITE_WEBSITE_URL отсутствует');
+  }
 
   return {
     plugins: [
@@ -28,6 +35,12 @@ export default defineConfig(({ mode }) => {
     ],
     server: {
       port: 3000,
+      proxy: {
+        '/api': {
+          secure: false,
+          target: env.VITE_SERVER_URL,
+        },
+      },
     },
     resolve: {
       alias: {
