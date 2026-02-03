@@ -16,7 +16,24 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bun i"
+  "postCreateCommand": "bun i",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "oven.bun-vscode",
+        "Anthropic.claude-code",
+        "streetsidesoftware.code-spell-checker",
+        "naumovs.color-highlight",
+        "dbaeumer.vscode-eslint",
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "mutantdino.resourcemonitor",
+        "bradlc.vscode-tailwindcss",
+        "streetsidesoftware.code-spell-checker-russian",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
 
   // Configure tool-specific properties.
   // "customizations": {},
