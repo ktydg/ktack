@@ -4,3 +4,7 @@ yarn.lock
 bun.lock
 routerTree.gen.ts
 docker-compose.yml
+.claude
+.devcontainer
+.github
+CLAUDE.md

@@ -1,6 +1,10 @@
 .git
 .husky
 .vscode
+.claude
+.devcontainer
+.github
+CLAUDE.md
 .dockerignore
 .gitignore
 .prettierignore
